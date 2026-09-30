@@ -17,7 +17,9 @@
 | `1~3화 점검만 해줘` | 준비 → 검증 보고, 원고 수정 없음 |
 | `2화 어색한 문장 고쳐줘` | 준비 → 해당 범위 퇴고 → 검증 |
 
-스킬 원본: [작업 시작](.agents/skills/task-start/SKILL.md), [집필](.agents/skills/novel-write/SKILL.md), [검증](.agents/skills/novel-review/SKILL.md). AGENTS.md와 CLAUDE.md에서 같은 파일을 참조한다. 새 핵심 설정은 작가 승인 없이 확정하지 않는다.
+스킬 원본: [작업 시작](skill/task-start/SKILL.md), [집필](skill/novel-write/SKILL.md), [검증](skill/novel-review/SKILL.md). AGENTS.md와 CLAUDE.md에서 같은 파일을 참조한다. 새 핵심 설정은 작가 승인 없이 확정하지 않는다.
+
+2026-10-01 요청에 따라 실제 지침을 `skill/`에 모았다. [인덱스](skill/INDEX.md)에서 기존 설정집·구성·원고를 찾아 읽고 [공통 작업 지침](skill/working-rules.md)에 따라 시작·검증·마무리를 수행한다. `.agents/skills/`에는 자동 호출용 연결만 유지한다.
 
 터미널에서는 저장소 루트의 PowerShell 7에서 실행한다.
 

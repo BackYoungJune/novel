@@ -65,11 +65,11 @@
 
 ## 작업 스킬 (확정)
 
-2026-09-30 작가 요청으로 작업 시작·집필·검증 절차를 스킬로 분리한다. 기존 설정집을 규칙의 원본으로 유지한다.
+2026-09-30 작가 요청으로 작업 시작·집필·검증 절차를 스킬로 분리한다. 기존 설정집을 규칙의 원본으로 유지한다. 2026-10-01 작가 요청으로 실제 지침을 skill/에 모았다. [인덱스](skill/INDEX.md)와 [공통 작업 지침](skill/working-rules.md)에서 시작하며, .agents/skills는 자동 호출 연결만 유지한다.
 
-- 작업 시작 또는 채팅에서 `./task-start` 요청: [.agents/skills/task-start/SKILL.md](.agents/skills/task-start/SKILL.md)를 읽는다.
-- “몇 화 써줘”, “이어서 써줘”, “고쳐줘”, “분량 맞춰줘”: 준비 후 [novel-write](.agents/skills/novel-write/SKILL.md)를 적용하고 [novel-review](.agents/skills/novel-review/SKILL.md)로 자체 검증·수정한다.
-- “점검해줘”, “검증해줘”, “클로드가 수정했으니 봐줘”: [novel-review](.agents/skills/novel-review/SKILL.md)를 적용한다. 점검만 요청이면 파일을 수정하지 않는다.
+- 작업 시작 또는 채팅에서 `./task-start` 요청: [skill/task-start/SKILL.md](skill/task-start/SKILL.md)를 읽는다.
+- “몇 화 써줘”, “이어서 써줘”, “고쳐줘”, “분량 맞춰줘”: 준비 후 [novel-write](skill/novel-write/SKILL.md)를 적용하고 [novel-review](skill/novel-review/SKILL.md)로 자체 검증·수정한다.
+- “점검해줘”, “검증해줘”, “클로드가 수정했으니 봐줘”: [novel-review](skill/novel-review/SKILL.md)를 적용한다. 점검만 요청이면 파일을 수정하지 않는다.
 - 스킬이 목록에 아직 보이지 않아도 위 파일을 직접 읽고 같은 절차를 따른다. Claude도 이 경로의 공통 지침을 읽는다.
 - 터미널의 `./task-start -Mode review -Chapters 1,2,3`은 읽기 전용 분량 검사다. 명령 실행만으로 집필·문장 검증을 마쳤다고 보고하지 않는다.
 - 사용자 요청 범위가 명확하면 불필요한 재확인 없이 진행한다. 스킬 사용 자체는 커밋·푸시·플랫폼 게시의 추가 승인이 아니다.
