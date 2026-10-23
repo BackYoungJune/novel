@@ -82,7 +82,11 @@ foreach ($n in Get-ChapterNumbers) {
     $body = $body.Trim("`n")
 
     $dst = Join-Path $outDir ('{0:D3}.txt' -f $n)
-    [System.IO.File]::WriteAllText($dst, ($body -replace "`n", "`r`n"), $utf8NoBom)
+    $postedText = $body -replace "`n", "`r`n"
+    if (-not (Test-Path -LiteralPath $dst) -or
+        [System.IO.File]::ReadAllText($dst) -cne $postedText) {
+        [System.IO.File]::WriteAllText($dst, $postedText, $utf8NoBom)
+    }
 
     $rows += [pscustomobject]@{
         화       = ('{0:D3}' -f $n)
