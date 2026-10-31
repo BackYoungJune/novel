@@ -2,6 +2,8 @@
 # 서버 매일 연재 실행. cron이 부른다. 지시 내용은 서버_매일연재_지시.md에 있다.
 # 같은 서버의 AutoTrader를 보호하려고 메모리가 부족하면 실행하지 않는다.
 set -euo pipefail
+# cron의 PATH에는 pwsh(snap)와 claude가 없다.
+export PATH=/home/ubuntu/.local/bin:/snap/bin:/usr/local/bin:/usr/bin:/bin
 
 repo=/home/ubuntu/novel
 log_dir=/home/ubuntu/.local/share/novel-daily
